@@ -1,6 +1,6 @@
 # NetBOM Firewall PoC
 
-🚧 **Proof of Concept**  
+**Proof of Concept**  
 Generate and apply firewall rules from a NetBOM JSON file on an OPNsense firewall.
 
 ## Overview
@@ -34,3 +34,5 @@ python3 netbom_pf_tool_commented.py <netbom_file.json> <opnsense_ip> <ssh_userna
 
 ```bash
 python3 netbom_pf_tool_commented.py ecobee_netbom.json 192.168.120.1 root
+
+Learn more about the NetBOM initiative: [netbom.net](https://netbom.net)
