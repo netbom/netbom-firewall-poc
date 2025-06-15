@@ -1,0 +1,63 @@
+{
+  "netbom_version": "1.0",
+  "device": {
+    "name": "ecobee-thermostat",
+    "mac": "AA:BB:CC:DD:EE:FF",
+    "ip": "192.168.80.172",
+    "manufacturer": "ecobee",
+    "model": "SmartThermostat with Voice Control"
+  },
+  "connectivity": {
+    "allowed_endpoints": [
+      {
+        "description": "Ecobee cloud API",
+        "ip": "34.233.23.145",
+        "port": 443,
+        "protocol": "TCP"
+      },
+      {
+        "description": "AWS CDN endpoint",
+        "ip": "3.218.45.201",
+        "port": 443,
+        "protocol": "TCP"
+      },
+      {
+        "description": "Firmware update server",
+        "ip": "52.216.8.99",
+        "port": 443,
+        "protocol": "TCP"
+      },
+      {
+        "description": "NTP time sync",
+        "ip": "132.163.96.2",
+        "port": 123,
+        "protocol": "UDP"
+      }
+    ],
+    "dns": {
+      "domains": [
+        "*.ecobee.com",
+        "pool.ntp.org",
+        "time.ecobee.com"
+      ],
+      "allow_unlisted_dns": false
+    },
+    "ntp": {
+      "enabled": true,
+      "servers": [
+        "pool.ntp.org",
+        "time.ecobee.com"
+      ]
+    },
+    "behavior": {
+      "polling_interval_sec": 600,
+      "expected_idle_timeout_sec": 1800
+    }
+  },
+  "firewall_policy": {
+    "default_deny": true,
+    "logging": true,
+    "enforce_strict_match": true
+  },
+  "signature": "NOT_YET_IMPLEMENTED"
+}
